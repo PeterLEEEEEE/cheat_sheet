@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os, environ
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
