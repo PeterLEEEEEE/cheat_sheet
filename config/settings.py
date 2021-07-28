@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os, environ
-
+from django.urls import reverse_lazy
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -143,4 +144,4 @@ STATICFILES_DIRS = [
 ]
 
 LOGIN_REDIRECT_URL = reverse_lazy('account:hello_world')
-LOGOUT_REDIRECT_URL = rever_lazy('account:login')
+LOGOUT_REDIRECT_URL = reverse_lazy('account:login')
