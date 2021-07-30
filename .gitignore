@@ -83,3 +83,7 @@ db.sqlite3
 .idea/
 
 __pycache__/
+
+aws_pin_key.pem
+
+requirements.txt
