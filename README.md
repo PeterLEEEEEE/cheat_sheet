@@ -71,6 +71,8 @@ https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore 에�
 
 view에서 html 파일을 보낼때는 render로 return! ex) return render(request, template name) // 경로 연결 꼭 확인해야 한다.
 
+render(): HttpResponse랑 비슷하지만 render는 html 템플릿을 response하고 HttpResponse는 string을 반환한다. 
+
 <br>
 
 ## Model
