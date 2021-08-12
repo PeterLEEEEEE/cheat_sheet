@@ -19,8 +19,17 @@ source: 실용주의 프로그래머님의 [작정하고 장고](https://www.you
 pip list: 현재 내 가상환경에 설치된 라이브러리 조회
 *나는 conda를 쓰므로 가상환경이 anaconda 폴더에 존재함, 따로 하려면 만들때 설정을 바꾸면 됨*
 
-장고 설치하고 다시 pin list로 조회하면 장고가 설치된 것을 확인 가능
+장고 설치하고 다시 pip list로 조회하면 장고가 설치된 것을 확인 가능
+
+*IN conda envs
+conda create -n 가상환경이름 python=3.9(버전은 유동적으로)
+conda는 가상환경이 conda/envs에 보관됨
+
+가상환경 실행: conda activate 가상환경이름 
+
 <br><br>
+
+
 
 ## 장고 프로젝트 생성
 django-admin startproject (프로젝트명) 을 통해 장고 프로젝트를 새로 생성
@@ -58,9 +67,13 @@ git init 으로 해도되고 파이참은 VCS 버전 컨트롤로 해도 된다.
 
 - git reset --hard HEAD (HEAD로 롤백)
 - git branch -M main(master -> main)
+- git checkout -b 브랜치명 -> 브랜치 새로 만들고 이동
+- git push origin 브랜치명 --> 브랜치 푸시
+
 <br>
 
-*gitignore
+* **gitignore**
+https://www.toptal.com/developers/gitignore
 https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore 에서 jetbrain용 gitignore 내용을 제공해줌
 외에 추가적으로 venv, DB, cache 등 원하지 않는 내용 추가
 특히 키 값은 절대 올리면 안된다. 올리면 gitguardian한테서 메일 폭탄 맞음(django-environ을 사용한 방법도 있고 json파일로 따로 관리하는 방법도 있고 방법은 여러가지인듯)
