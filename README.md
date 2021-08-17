@@ -47,10 +47,12 @@ T - Template: 유저 인터페이스
 ## CRUD
 
 요약
-C: Create - Post 방식
-R: Read - Get 방식(list 조회, detail 등)
-U: Update - Put or Patch(Put은 전체 수정, Patch는 일부 수정)
-D: Delete - Delete
+- C: Create - Post 방식
+- R: Read - Get 방식(list 조회, detail 등)
+- U: Update - Put or Patch(Put은 전체 수정, Patch는 일부 수정)
+- D: Delete - Delete
+
+<br>
 
 Django는 CRUD view class를 지원해줌으로서 우리는 굉장히 편리하게 CRUD를 만들 수 있다.(CBV: Class Based View)
 
@@ -90,11 +92,33 @@ render(): HttpResponse랑 비슷하지만 render는 html 템플릿을 response�
 
 ## Model
 
-python manage.py makemigrations 
+- models.py에 table을 만들고 class META: db_table ... 을 통해 table 명 지정 가능, 지정하지 않을 시 앱이름_테이블명 으로 등록됨(직접 해봄)
+
+
+
+**python manage.py makemigrations**
 --> models.py에 쓰는 내용을 DB와 연동시킬 파이썬 파일로 만들어주는 작업 
-python manage.py migrate를 통해 최종적으로 적용된다.
+**python manage.py migrate**를 통해 최종적으로 적용된다.
 
 <br>
+
+## python manage.py shell
+shell 진입하여 테이블에 데이터 삽입 가능
+
+- get은 하나만 가져올 수 있음
+- filter는 여러 개 가져올 수 있음
+
+<br>
+
+## ManyToMany
+- 굳이 안써도 되지만 Foreign Key만 설정하는 것보다 ORM 조작에 있어서 매우 큰 장점을 지닌다. (쿼리가 간결해짐)
+
+<br>
+
+
+## Django ORM
+- 객체 생성: 테이블명.objects.create()
+
 
 ## HTTP protocol
 
