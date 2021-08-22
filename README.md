@@ -1,9 +1,6 @@
-# pin
-zero to hero maybe ;)
+# Cheat_sheet
 
-# pin
-zero to hero maybe ;)
-source: 실용주의 프로그래머님의 [작정하고 장고](https://www.youtube.com/watch?v=fz6hYVOer2Y&list=PLQFurmxCuZ2RVfilzQB5rCGWuODBf4Qjo&index=1)를 토대로 작성하였습니다.
+- 모든 치트키를 한 곳에
 
 <br><br><br>
 
@@ -118,6 +115,19 @@ shell 진입하여 테이블에 데이터 삽입 가능
 
 ## Django ORM
 - 객체 생성: 테이블명.objects.create()
+
+
+## SQL A to Z
+
+- SELECT 문: 열을 필터링하는 구문
+- WHERE 문: 행을 필터링하는 구문
+- ORDER BY (열명): 특정 열을 기준으로 정렬 (설정하지 않을 시 디비 내부 순서에 의해 반환됨), ORDER BY는 실제 테이블에 영향을 주지 않는다. 
+- ORDER BY 열, 열: 나열되는 열의 순서에 따라 값이 다르게 나옴(NULL 값이 포함된 경우, MYSQL 기준 asc에서는 가장 먼저, desc에서는 가장 나중에 등장하게끔 되어있음)
+- LIMIT 문: 행수를 제한해주는 구문 
+
+### 처리 순서 
+- WHERE 문과 SELECT 문의 처리 순서: WHERE -> SELECT( 행 -> 열 )
+- ORDER BY는 가장 나중에 처리: WHERE -> SELECT -> ORDER BY
 
 
 ## HTTP protocol
