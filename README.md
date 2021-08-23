@@ -125,10 +125,15 @@ shell 진입하여 테이블에 데이터 삽입 가능
 - ORDER BY 열, 열: 나열되는 열의 순서에 따라 값이 다르게 나옴(NULL 값이 포함된 경우, MYSQL 기준 asc에서는 가장 먼저, desc에서는 가장 나중에 등장하게끔 되어있음)
 - LIMIT 문: 행수를 제한해주는 구문 
 
+<br>
+
 ### 처리 순서 
 - WHERE 문과 SELECT 문의 처리 순서: WHERE -> SELECT( 행 -> 열 )
 - ORDER BY는 가장 나중에 처리: WHERE -> SELECT -> ORDER BY
 
+
+
+<br><br>
 
 ## HTTP protocol
 
