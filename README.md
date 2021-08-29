@@ -124,12 +124,15 @@ shell 진입하여 테이블에 데이터 삽입 가능
 - ORDER BY (열명): 특정 열을 기준으로 정렬 (설정하지 않을 시 디비 내부 순서에 의해 반환됨), ORDER BY는 실제 테이블에 영향을 주지 않는다. 
 - ORDER BY 열, 열: 나열되는 열의 순서에 따라 값이 다르게 나옴(NULL 값이 포함된 경우, MYSQL 기준 asc에서는 가장 먼저, desc에서는 가장 나중에 등장하게끔 되어있음)
 - LIMIT 문: 행수를 제한해주는 구문 
+- HAVING 구를 사용해 집계함수의 조건식 지정 가능,, GROUP BY hour HAVING hour >= 1 and hour <= 5
+ 
 
 <br>
 
 ### 처리 순서 
 - WHERE 문과 SELECT 문의 처리 순서: WHERE -> SELECT( 행 -> 열 )
-- ORDER BY는 가장 나중에 처리: WHERE -> SELECT -> ORDER BY
+- WHERE 구에서는 집계함수 사용 불가 
+- ORDER BY는 가장 나중에 처리: WHERE -> GROUP BY -> SELECT -> ORDER BY
 
 
 
